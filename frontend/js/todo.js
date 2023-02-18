@@ -10,7 +10,9 @@ fetch("/api/todos")
     })
     .then(function(data) {
         console.log(data);
-    });
+        document.getElementById("loader").style.display = "none";
+    })
+
 
 var light = true;
 
@@ -18,7 +20,7 @@ function setTheme() {
     if (light) {
         document.documentElement.setAttribute("data-bs-theme", 'dark');
     } else {
-        document.documentElement.setAttribute("data-bs-theme", "dark");
+        document.documentElement.setAttribute("data-bs-theme", "light");
     }
     light = !light;
 }
