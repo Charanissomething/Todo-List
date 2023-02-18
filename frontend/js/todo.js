@@ -11,3 +11,12 @@ fetch("/api/todos")
     .then(function(data) {
         console.log(data);
     });
+var light = true;
+
+function setTheme() {
+    if (light) {
+        document.documentElement.setAttribute("data-bs-theme", 'dark');
+    } else {
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+    }
+}
