@@ -4,15 +4,17 @@ document.getElementById("loader").style.display = "block";
 
 
 
-fetch("/api/todos")
+fetch('/api/todos')
     .then(function(res) {
-        return res.json();
+        return res.json()
     })
     .then(function(data) {
         console.log(data);
         document.getElementById("loader").style.display = "none";
-    })
 
+        document.getElementById('todoCount').innerHTML = data.length;
+
+    });
 
 var light = true;
 
