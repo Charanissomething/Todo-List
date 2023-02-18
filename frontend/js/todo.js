@@ -11,6 +11,7 @@ fetch("/api/todos")
     .then(function(data) {
         console.log(data);
     });
+
 var light = true;
 
 function setTheme() {
