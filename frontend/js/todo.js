@@ -19,4 +19,5 @@ function setTheme() {
     } else {
         document.documentElement.setAttribute("data-bs-theme", "dark");
     }
+    light = !light;
 }
