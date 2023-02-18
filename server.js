@@ -10,10 +10,6 @@ app.get("/api/todos", function(req, res) {
     res.json([
         { name: "todo1", iscompleted: true }, { name: "todo1", iscompleted: true }, { name: "todo1", iscompleted: true }
     ]);
-
-
-    // { "hello": "hi" })
-    // res.send("hi");
 });
 
 app.use("/", function(req, res) {
