@@ -11,7 +11,7 @@ import mongoose from "mongoose";
 // const { request } = require("express"); 
 import express, { request } from "express";
 const app = express();
-const port = process.env.PORT || 500;
+const port = process.env.PORT || 5050;
 const options = {
     extensions: ['htm', 'html', 'css', 'js', 'ico', 'jpg', 'jpeg', 'png', 'svg', 'pdf'],
     index: ['index.html'],
