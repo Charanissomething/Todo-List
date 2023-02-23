@@ -11,7 +11,7 @@ import mongoose from "mongoose";
 // const { request } = require("express"); 
 import express, { request } from "express";
 const app = express();
-const port = process.env.PORT || 5050;
+const port = process.env.PORT || 5030;
 const options = {
     extensions: ['htm', 'html', 'css', 'js', 'ico', 'jpg', 'jpeg', 'png', 'svg', 'pdf'],
     index: ['index.html'],
@@ -66,24 +66,24 @@ app.delete(("/api/todos/:todoid"), function(req, res) {
 });
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/frontend/html/index.html");
+    res.sendFile(process.cwd() + "/frontend/html/index.html");
 });
 
 app.get("/resume", function(req, res) {
-    res.sendFile(__dirname + "/frontend/html/resume.html");
+    res.sendFile(process.cwd() + "/frontend/html/resume.html");
 });
 
 app.get("/card", function(req, res) {
-    res.sendFile(__dirname + "/frontend/html/card.html");
+    res.sendFile(process.cwd() + "/frontend/html/card.html");
 });
 app.get("/weather", function(req, res) {
-    res.sendFile(__dirname + "/frontend/html/weather.html");
+    res.sendFile(process.cwd() + "/frontend/html/weather.html");
 });
 app.get("/todolist", function(req, res) {
-    res.sendFile(__dirname + "/frontend/html/todolist.html");
+    res.sendFile(process.cwd() + "/frontend/html/todolist.html");
 });
 app.get("/about", function(req, res) {
-    res.sendFile(__dirname + "/frontend/html/about.html");
+    res.sendFile(process.cwd() + "/frontend/html/about.html");
 });
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function(err) {
